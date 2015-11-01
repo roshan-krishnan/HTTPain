@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>AutoTuner</title>
+        <link rel="stylesheet" type="text/css" href="httpain/style.css">
+        <script src='httpain/autotuner.js'></script>
+    </head>
+    <body>
+        <div>
+            <h1>HTTPAIN</h1>
+            <p>by <a href="http://www.roshankrishnan.com">Roshan Krishnan</a></p>
+        </div>
+        <div id="tpain"></div>
+        <div>
+            <h2>Recording:</h2>
+            <button class="myButton" onclick="startRecord()">Start</button>
+            <button class="myButton" onclick="stopRecord()">Stop</button>
+        </div>
+        <div>
+            <h2 id="keytext">Key:</h2>
+            <button class="myButton" id="maj" onclick="majMin(this)">Major</button>
+            <button class="myButton" id="min" onclick="majMin(this)">Minor</button><br/>
+            <button class="myButton" id="1" onclick="setKey(this)">C</button>
+            <button class="myButton" id="2" onclick="setKey(this)">C#/Db</button>
+            <button class="myButton" id="3" onclick="setKey(this)">D</button>
+            <button class="myButton" id="4" onclick="setKey(this)">D#/Eb</button>
+            <button class="myButton" id="5" onclick="setKey(this)">E</button>
+            <button class="myButton" id="6" onclick="setKey(this)">F</button><br/>
+            <button class="myButton" id="7" onclick="setKey(this)">F#/Gb</button>
+            <button class="myButton" id="8" onclick="setKey(this)">G</button>
+            <button class="myButton" id="9" onclick="setKey(this)">G#/Ab</button>
+            <button class="myButton" id="10" onclick="setKey(this)">A</button>
+            <button class="myButton" id="11" onclick="setKey(this)">A#/Bb</button>
+            <button class="myButton" id="12" onclick="setKey(this)">B</button>
+        </div>
+    </body>
+</html>
