@@ -16,7 +16,7 @@ var freqPerBin;                                 // frequency per bin. will just 
 var rec;                                        // variable to hold a RecorderJS object.
 var isMaj = true;                               // flag that denotes whether we've selected a major key
 var keyID;                                      // ID of a key- C is 1, C# is 2, ...., B is 12.
-var isRecording = false;                        // flag that indicates whether recording is in progress
+var isRecording = false;                        // flag that indicates whether a recording is in progress
 
 // Basic note frequency lookup table for a MAJOR scale from C0 to B8.
 var majorScale = [
@@ -44,8 +44,8 @@ var minorScale = [
 
 // array of pictures of T-Pain, because why not?
 var tPainArray = [
-    "../images/tpain1.jpg","../images/tpain2.png","../images/tpain3.jpg","../images/tpain4.jpeg","../images/tpain5.jpg",
-    "../images/tpain6.jpg","../images/tpain7.jpg","../images/tpain8.jpg","./tpain9.jpg","../images/tpain10.png"
+    "../images/tpain1.jpg","../images/tpain2.png","../images/tpain3.jpg","../images/tpain4.png","../images/tpain5.jpg",
+    "../images/tpain6.jpg","../images/tpain7.jpg","../images/tpain8.jpg","../images/tpain9.jpg","../images/tpain10.png"
 ];
 
 
@@ -102,7 +102,7 @@ window.onload = function() {
             lpfOut.connect(context.destination);
             
             // create a new RecorderJS object
-            rec = new Recorder(processor);
+            rec = new Recorder(processor, {workerPath: "httpain/recorderWorker.js"});
             
             // do buffered audio processing
             processor.onaudioprocess = function(audioData){
